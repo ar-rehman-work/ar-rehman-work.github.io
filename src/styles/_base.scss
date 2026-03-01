@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+body {
+  margin: 0;
+  background: $bg-primary;
+  color: $text-primary;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem;
+}
+
+section {
+  padding: $spacing-section 20px;
+  min-height: 100vh;
+}
+
+a {
+  color: $react-accent;
+  text-decoration: none;
+  transition: $transition-default;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
