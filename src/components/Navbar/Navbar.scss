@@ -1,0 +1,135 @@
+@use '../../styles/variables' as vars;
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+
+  &__container {
+    max-width: vars.$container-width;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    position: relative;
+
+    li {
+      position: relative;
+
+      a {
+        position: relative;
+        font-size: 0.95rem;
+        text-decoration: none;
+        color: var(--text-secondary);
+        transition: vars.$transition-default;
+
+        &:hover {
+          color: var(--accent);
+        }
+
+        &:hover .navbar__tooltip {
+          opacity: 1;
+          transform: translateX(-50%) translateY(4px);
+        }
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: vars.$border-radius;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    transition: vars.$transition-default;
+  }
+
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__theme {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: rotate(20deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    &__links {
+      gap: 1.5rem;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      flex-direction: column;
+      width: 160px;
+      padding: 1.2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+      border-radius: vars.$border-radius;
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+
+      li:not(:last-child) {
+        border-bottom: 1px solid var(--border-primary);
+      }
+    }
+
+    &__links.active {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+}

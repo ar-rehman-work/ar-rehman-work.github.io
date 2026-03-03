@@ -1,0 +1,41 @@
+.work {
+  text-align: center;
+  padding: 6rem 20px;
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  &__tabs button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    position: relative;
+    padding-bottom: 6px;
+    transition: 0.3s ease;
+  }
+
+  &__tabs button.active {
+    color: var(--accent);
+  }
+
+  &__tabs button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  &__content {
+    margin-top: 2rem;
+    min-height: 300px;
+  }
+}
