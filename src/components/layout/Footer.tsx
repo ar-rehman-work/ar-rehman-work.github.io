@@ -5,7 +5,7 @@ function Footer() {
     <footer className="site-footer">
       <div className="container footer__inner">
         <p>
-          © 2026 {profile.name}. Built with React, TypeScript, Vite, and SCSS.
+          © 2026 {profile.name} - { profile.role }
         </p>
         <a href="#top">Back to top</a>
       </div>
