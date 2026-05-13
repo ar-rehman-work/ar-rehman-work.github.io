@@ -61,12 +61,14 @@ This is a static Vite app that deploys automatically to GitHub Pages with GitHub
 
 1. Push changes to the `main` branch.
 2. Open the GitHub repository: `ar-rehman-work/ar-rehman-work.github.io`.
-3. Go to **Settings → Pages**.
+3. Go to **Settings -> Pages**.
 4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 5. Open the **Actions** tab and check the deployment workflow result.
 6. The site should be available at `https://ar-rehman-work.github.io`.
 
 The workflow installs dependencies with `npm ci`, runs lint, builds with `npm run build`, uploads only the `dist` folder as a Pages artifact, and deploys using the official GitHub Pages actions. The deployed site should load bundled files from `/assets/...`, not raw source files like `/src/main.tsx`.
+
+If the browser tries to load `/src/main.tsx`, GitHub Pages is serving the repository root instead of the Actions artifact. Re-check **Settings -> Pages -> Build and deployment -> Source -> GitHub Actions**, then run the deployment workflow again from the **Actions** tab or push a new commit to `main`.
 
 ### Vercel / Netlify
 
