@@ -6,7 +6,7 @@ type ContactLinkListProps = {
 
 function ContactLinkList({ links }: ContactLinkListProps) {
   return (
-    <ul className="contact-list" aria-label="Contact links">
+    <ul className='contact-list' aria-label='Contact links'>
       {links.map((link) => (
         <li key={link.label}>
           <span>{link.label}</span>

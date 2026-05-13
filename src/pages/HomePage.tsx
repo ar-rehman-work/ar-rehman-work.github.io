@@ -1,3 +1,4 @@
+import BackToTopButton from '../components/common/BackToTopButton'
 import Footer from '../components/layout/Footer'
 import Navbar from '../components/layout/Navbar'
 import AboutSection from '../components/sections/AboutSection'
@@ -10,14 +11,14 @@ import SkillsSection from '../components/sections/SkillsSection'
 
 function HomePage() {
   return (
-    <div className="site-shell">
-      <a className="skip-link" href="#main-content">
+    <div className='site-shell'>
+      <a className='skip-link' href='#main-content'>
         Skip to main content
       </a>
 
       <Navbar />
 
-      <main id="main-content">
+      <main id='main-content'>
         <HeroSection />
         <AboutSection />
         <SkillsSection />
@@ -28,6 +29,7 @@ function HomePage() {
       </main>
 
       <Footer />
+      <BackToTopButton />
     </div>
   )
 }

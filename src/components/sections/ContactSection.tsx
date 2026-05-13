@@ -4,15 +4,15 @@ import { socialLinks } from '../../data/socialLinks'
 
 function ContactSection() {
   return (
-    <section id="contact" className="section section--muted">
-      <div className="container split-layout">
+    <section id='contact' className='section section--muted'>
+      <div className='container split-layout'>
         <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Let&apos;s build something useful.</h2>
+          <p className='eyebrow'>Contact</p>
+          <h2>Open to senior full stack and backend opportunities.</h2>
         </div>
-        <div className="contact-panel">
+        <div className='contact-panel'>
           <p>
-            I am based in {profile.location} and open to senior full stack, backend, and API-focused software
+            I am based in {profile.location} and open to senior full stack, backend, and API focused software
             engineering opportunities. The fastest way to reach me is by email or LinkedIn.
           </p>
           <ContactLinkList links={socialLinks} />

@@ -4,35 +4,35 @@ A clean, responsive React portfolio for Abdul Rehman, a full stack software engi
 
 ## Tech Stack
 
-- React 19
-- TypeScript
-- Vite
-- SCSS / Sass
-- ESLint
+* React 19
+* TypeScript
+* Vite
+* SCSS / Sass
+* ESLint
 
 ## Portfolio Sections
 
-- Hero introduction with recruiter-friendly positioning
-- About section
-- Skills grouped by backend, frontend, and infrastructure
-- Featured URL Shortener project
-- Experience highlights
-- Resume/CV request call-to-action
-- Contact links
-- Footer
+* Hero introduction with recruiter friendly positioning
+* About section
+* Skills grouped by backend, frontend, and infrastructure
+* Featured URL Shortener project
+* Experience highlights
+* Resume/CV request call to action
+* Contact links
+* Footer
 
 ## Featured Project
 
 The portfolio highlights a URL Shortener project with:
 
-- Authentication
-- Custom aliases
-- Expiration support
-- Search and filtering
-- Pagination
-- Base62 short-code generation
-- Clean REST API design
-- Redis caching roadmap
+* Authentication
+* Custom aliases
+* Expiration support
+* Search and filtering
+* Pagination
+* Base62 short code generation
+* Clean REST API design
+* Redis caching roadmap
 
 ## Run Locally
 
