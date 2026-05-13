@@ -1,0 +1,16 @@
+@mixin focus-ring {
+  outline: 3px solid rgba(56, 189, 248, 0.55);
+  outline-offset: 4px;
+}
+
+@mixin tablet-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

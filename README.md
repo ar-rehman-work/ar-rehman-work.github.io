@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Abdul Rehman Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive React portfolio for Abdul Rehman, a full stack software engineer focused on backend engineering, REST API development, scalable systems, and practical full stack product delivery.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- SCSS / Sass
+- ESLint
 
-## React Compiler
+## Portfolio Sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Hero introduction with recruiter-friendly positioning
+- About section
+- Skills grouped by backend, frontend, and infrastructure
+- Featured URL Shortener project
+- Experience highlights
+- Resume/CV request call-to-action
+- Contact links
+- Footer
 
-## Expanding the ESLint configuration
+## Featured Project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The portfolio highlights a URL Shortener project with:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Authentication
+- Custom aliases
+- Expiration support
+- Search and filtering
+- Pagination
+- Base62 short-code generation
+- Clean REST API design
+- Redis caching roadmap
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Run Locally
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+This is a static Vite app and can be deployed to GitHub Pages, Vercel, Netlify, or any static hosting provider.
+
+### GitHub Pages
+
+1. Run `npm run build`.
+2. Deploy the generated `dist` directory using a GitHub Pages workflow or a deployment action.
+3. Configure a custom domain if needed.
+
+### Vercel / Netlify
+
+1. Connect the GitHub repository.
+2. Use `npm run build` as the build command.
+3. Use `dist` as the publish directory.
