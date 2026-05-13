@@ -19,12 +19,12 @@ export const featuredProject: Project = {
   title: 'URL Shortener Platform',
   stack: 'Ruby on Rails / React / PostgreSQL',
   description:
-    'A full stack URL management app designed around clean REST API endpoints, authenticated user flows, and reliable link creation. It is built to show practical backend decision-making rather than just a simple redirect demo.',
+    'A full stack URL management app designed around clean REST API endpoints, authenticated user flows, and reliable link creation. It is built to show practical backend decision making rather than just a simple redirect demo.',
   highlights: [
-    'Secure authentication flow for managing user-owned shortened links.',
+    'Secure authentication flow for managing user owned shortened links.',
     'Custom aliases, expiration dates, search/filtering, and paginated link management.',
-    'Base62 short-code generation with a clean REST API design for create, redirect, and analytics-ready workflows.',
-    'Roadmap includes Redis caching to speed up high-volume redirect lookups.',
+    'Base62 short code generation with a clean REST API design for create, redirect, and analytics ready workflows.',
+    'Roadmap includes Redis caching to speed up high volume redirect lookups.',
   ],
   preview: {
     shortUrl: 'short.ly/aB92x',

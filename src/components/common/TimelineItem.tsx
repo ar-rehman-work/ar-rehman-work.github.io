@@ -6,12 +6,12 @@ type TimelineItemProps = {
 
 function TimelineItem({ item }: TimelineItemProps) {
   return (
-    <article className="timeline-item">
+    <article className='timeline-item'>
       <h3>{item.title}</h3>
-      <p className="timeline-item__meta">
-        {item.company} · {item.location} · {item.period}
+      <p className='timeline-item__meta'>
+        {item.company} | {item.location} | {item.period}
       </p>
-      <ul className="feature-list feature-list--compact">
+      <ul className='feature-list feature-list--compact'>
         {item.highlights.map((highlight) => (
           <li key={highlight}>{highlight}</li>
         ))}
