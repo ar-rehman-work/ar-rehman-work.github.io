@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Abdul Rehman',
   role: 'Senior Software Engineer | Full Stack Developer',
-  headline: 'I build scalable Rails APIs and React products for SaaS teams.',
+  headline: 'Building scalable APIs, backend systems, and React products using Rails, Django, and modern web technologies.',
   summary:
     'I am a results driven software engineer with 3+ years of experience building scalable web applications and backend systems with Ruby on Rails, Python, React, PostgreSQL, and clean API architecture.',
   email: 'ar.rehman.work@gmail.com',
