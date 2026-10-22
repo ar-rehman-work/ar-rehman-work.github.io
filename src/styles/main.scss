@@ -58,7 +58,6 @@ li {
 
 .site-shell {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .container {
@@ -89,7 +88,7 @@ li {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid $color-border;
-  background: rgba(11, 17, 32, 0.88);
+  background: rgba(11, 17, 32, 0.4);
   backdrop-filter: blur(18px);
 }
 
@@ -104,19 +103,46 @@ li {
 .brand {
   color: $color-text;
   font-family: $font-heading;
-  font-size: 1.02rem;
+  font-size: 2.5rem;
+  color: $color-accent;
   font-weight: 800;
   letter-spacing: 0;
   white-space: nowrap;
+
+  @include desktop-up {
+    font-size: 1.02rem;
+  }
+}
+
+.nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.65rem;
+  border: 1px solid $color-border;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+  }
 }
 
 .nav__links {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.25rem;
 
   a {
-    border-radius: 999px;
+    border-radius: 8px;
     color: $color-text-muted;
     font-size: 0.93rem;
     font-weight: 650;
@@ -130,9 +156,55 @@ li {
       color: $color-text;
     }
   }
+}
 
-  @include tablet-up {
+@include desktop-down {
+  .nav__toggle {
     display: flex;
+  }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    right: 0;
+    z-index: 30;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem;
+    border: 1px solid $color-border;
+    border-radius: 0.75rem;
+    background: #0b1120;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+    a {
+      display: block;
+      padding: 0.85rem 1rem;
+    }
+
+    &.nav__links--open {
+      display: flex;
+    }
+  }
+}
+
+@include tablet-up {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
   }
 }
 
@@ -160,6 +232,16 @@ li {
   gap: clamp(1.75rem, 4vw, 3rem);
   align-items: start;
 
+  @include desktop-down {
+    > :first-child {
+      order: 2;
+    }
+
+    > :nth-child(2) {
+      order: 1;
+    }
+  }
+
   @include desktop-up {
     grid-template-columns: minmax(0, 1fr) minmax(390px, 0.95fr);
   }
@@ -169,6 +251,10 @@ li {
   display: grid;
   gap: 1.25rem;
   padding-top: 0.25rem;
+
+  @include desktop-down {
+    text-align: center;
+  }
 }
 
 .eyebrow {
@@ -188,6 +274,13 @@ h3 {
   font-family: $font-heading;
   font-weight: 700;
   line-height: 1.04;
+}
+
+h1,
+h2 {
+  @include desktop-down {
+    text-align: center;
+  }
 }
 
 h1 {
@@ -266,6 +359,10 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
+
+  @include desktop-down {
+    justify-content: center;
+  }
 }
 
 .hero-focus li {
@@ -283,6 +380,10 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
+
+  @include desktop-down {
+    justify-content: center;
+  }
 }
 
 .button {
@@ -357,6 +458,10 @@ h3 {
     inset: 42% 8% 3% 22%;
     background: rgba(52, 211, 153, 0.12);
   }
+
+  @include desktop-down {
+    margin-bottom: 30px;
+  }
 }
 
 .hero__photo {
@@ -404,6 +509,10 @@ h3 {
   gap: 1rem;
 
   @include tablet-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include desktop-up {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -629,6 +738,10 @@ h3 {
 
   p {
     margin-bottom: 0;
+
+    @include desktop-down {
+      text-align: center;
+    }
   }
 }
 
@@ -641,10 +754,7 @@ h3 {
     gap: 0.2rem;
     border-top: 1px solid $color-border;
     padding-top: 0.85rem;
-
-    @include tablet-up {
-      grid-template-columns: 120px minmax(0, 1fr);
-    }
+    grid-template-columns: 1fr 4fr;
   }
 
   span {

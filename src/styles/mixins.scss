@@ -14,3 +14,9 @@
     @content;
   }
 }
+
+@mixin desktop-down {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
