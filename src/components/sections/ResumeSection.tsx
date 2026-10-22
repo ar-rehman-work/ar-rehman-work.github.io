@@ -1,4 +1,3 @@
-import { profile } from '../../data/profileData'
 import { certifications, education } from '../../data/experienceData'
 import ButtonLink from '../ui/ButtonLink'
 
@@ -13,7 +12,7 @@ function ResumeSection() {
             {education.degree}, {education.school}. Certifications include {certifications.join(', ')}.
           </p>
         </div>
-        <ButtonLink href={profile.resumeRequestHref}>Request CV</ButtonLink>
+        <ButtonLink href='#contact'>Request CV</ButtonLink>
       </div>
     </section>
   )
